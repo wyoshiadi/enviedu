@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.artifacts/
+.browser-profile/
+*.tar.gz
+.local/
+.sites-runtime/
+.dev.vars*
+build/
+.wrangler/
+wrangler.jsonc
