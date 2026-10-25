@@ -1,0 +1,207 @@
+{
+  "pretest": {
+    "title": "Start with your current understanding",
+    "introduction": "Answer using your current understanding. No answer feedback is provided during the session.",
+    "fields": [
+      {
+        "id": "familiarity",
+        "type": "choice",
+        "prompt": "Before this session, how familiar were you with carbon accumulation models?",
+        "options": [
+          {
+            "value": "0",
+            "label": "I have never studied them"
+          },
+          {
+            "value": "1",
+            "label": "I have heard of them but have not studied the models"
+          },
+          {
+            "value": "2",
+            "label": "I have studied the models"
+          },
+          {
+            "value": "3",
+            "label": "I have used or built such a model"
+          }
+        ]
+      },
+      {
+        "id": "stock",
+        "type": "choice",
+        "prompt": "The water already inside a tank is…",
+        "options": [
+          {
+            "value": "stock",
+            "label": "The amount stored"
+          },
+          {
+            "value": "inflow",
+            "label": "The rate of water entering"
+          },
+          {
+            "value": "outflow",
+            "label": "The rate of water leaving"
+          }
+        ]
+      },
+      {
+        "id": "change",
+        "type": "choice",
+        "prompt": "Inflow decreases from 10 to 6 L/min. Outflow stays at 4 L/min. After this change, the amount of water in the tank…",
+        "options": [
+          {
+            "value": "rise",
+            "label": "Increases"
+          },
+          {
+            "value": "steady",
+            "label": "Stays constant"
+          },
+          {
+            "value": "fall",
+            "label": "Decreases"
+          }
+        ]
+      },
+      {
+        "id": "balance",
+        "type": "number",
+        "prompt": "A tank contains 30 L. Inflow and outflow are both 5 L/min. How many litres are in the tank after 10 minutes?",
+        "hint": "Enter a number in litres."
+      },
+      {
+        "id": "explanation",
+        "type": "text",
+        "prompt": "Explain your answer about the change in the amount of water when inflow decreases."
+      }
+    ]
+  },
+  "posttest": {
+    "title": "Revisit your understanding",
+    "introduction": "Use what you have learned. No score or answer feedback is shown on this page.",
+    "fields": [
+      {
+        "id": "stock",
+        "type": "choice",
+        "prompt": "In the waste case, which quantity is a stock?",
+        "options": [
+          {
+            "value": "processing",
+            "label": "Tonnes of waste processed per day"
+          },
+          {
+            "value": "backlog",
+            "label": "Tonnes of waste waiting at the storage site"
+          },
+          {
+            "value": "incoming",
+            "label": "Tonnes of waste arriving per day"
+          }
+        ]
+      },
+      {
+        "id": "change",
+        "type": "choice",
+        "prompt": "Water is already present in a storage area. Runoff is 40 m³/min and drainage capacity is 60 m³/min. While water remains available, the amount of stored water…",
+        "options": [
+          {
+            "value": "rise",
+            "label": "Increases"
+          },
+          {
+            "value": "steady",
+            "label": "Stays constant"
+          },
+          {
+            "value": "fall",
+            "label": "Decreases"
+          }
+        ]
+      },
+      {
+        "id": "balance",
+        "type": "number",
+        "prompt": "There are 45 tonnes of waste. Incoming waste and processing are both 7 tonnes/day. How many tonnes remain after 3 days?"
+      },
+      {
+        "id": "explanation",
+        "type": "text",
+        "prompt": "Why does reducing inflow not necessarily reduce the amount already accumulated?"
+      }
+    ]
+  },
+  "transfer": {
+    "title": "Apply your understanding in a new context",
+    "introduction": "Consider a simplified, clearly bounded CO₂ reservoir. Emissions add CO₂ and uptake removes it. Assume a constant uptake rate and a nonnegative stock. Ignore other processes. This is an educational model, not a real atmospheric forecast.",
+    "fields": [
+      {
+        "id": "stock",
+        "type": "choice",
+        "prompt": "Which quantity is a stock in this reservoir?",
+        "options": [
+          {
+            "value": "emissions",
+            "label": "CO₂ emissions per year"
+          },
+          {
+            "value": "amount",
+            "label": "The amount of CO₂ in the reservoir"
+          },
+          {
+            "value": "removal",
+            "label": "CO₂ uptake per year"
+          }
+        ]
+      },
+      {
+        "id": "change",
+        "type": "choice",
+        "prompt": "Emissions decrease from 12 to 8 tonnes of CO₂/year. Uptake stays at 6 tonnes of CO₂/year. After emissions decrease, the amount of CO₂…",
+        "options": [
+          {
+            "value": "rise",
+            "label": "Still increases, but more slowly"
+          },
+          {
+            "value": "steady",
+            "label": "Immediately stays constant"
+          },
+          {
+            "value": "fall",
+            "label": "Immediately decreases"
+          }
+        ]
+      },
+      {
+        "id": "balance",
+        "type": "number",
+        "prompt": "The reservoir contains 100 tonnes of CO₂. Emissions stay at 8 and uptake stays at 6 tonnes of CO₂/year. How many tonnes of CO₂ are in the reservoir after 5 years?"
+      },
+      {
+        "id": "policy",
+        "type": "choice",
+        "prompt": "While stock remains available, which condition makes the amount of CO₂ decrease?",
+        "options": [
+          {
+            "value": "less-than",
+            "label": "Emissions are lower than uptake"
+          },
+          {
+            "value": "equal",
+            "label": "Emissions equal uptake"
+          },
+          {
+            "value": "reduced",
+            "label": "Emissions decrease but remain higher than uptake"
+          }
+        ]
+      },
+      {
+        "id": "explanation",
+        "type": "text",
+        "prompt": "Explain the relationship between emissions, uptake, and the change in the amount of CO₂. What condition must a policy achieve to reduce the stock?"
+      }
+    ]
+  }
+}

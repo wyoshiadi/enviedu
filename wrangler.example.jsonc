@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "enviedu",
+  "main": "build/cloudflare/server/index.js",
+  "compatibility_date": "2026-10-24",
+  "no_bundle": true,
+  "find_additional_modules": false,
+  "workers_dev": false,
+  "preview_urls": false,
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "build": { "command": "npm run build:cloudflare" },
+  "routes": [
+    { "pattern": "enviedu.com", "custom_domain": true }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "enviedu-db",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "vars": {
+    "CF_ACCESS_TEAM_DOMAIN": "https://team-anda.cloudflareaccess.com",
+    "CF_ACCESS_AUD": "REPLACE_WITH_ACCESS_APPLICATION_AUD"
+  }
+}

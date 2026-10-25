@@ -11,3 +11,11 @@ node_modules/
 build/
 .wrangler/
 wrangler.jsonc
+
+# Generated packages and local research data
+dist/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+enviedu-*.csv

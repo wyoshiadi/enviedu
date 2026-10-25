@@ -1,0 +1,124 @@
+[
+  {
+    "id": "waste",
+    "version": "1.0.2-en",
+    "engine": "single-stock",
+    "title": "Waste awaiting processing",
+    "shortTitle": "Waste",
+    "theme": "sage",
+    "context": "A facility receives waste every day. After six days, incoming waste is reduced while processing capacity stays the same. How does the amount of waste awaiting processing change?",
+    "stockLabel": "Unprocessed waste",
+    "inflowLabel": "Waste inflow",
+    "outflowLabel": "Processing capacity",
+    "stockUnit": "t",
+    "timeUnit": "d",
+    "flowUnit": "t/d",
+    "duration": 12,
+    "dt": 1,
+    "defaults": {
+      "initialStock": 20,
+      "inflow": 12,
+      "outflow": 8,
+      "inflowAfter": 9,
+      "policyAt": 6
+    },
+    "bounds": {
+      "initialStock": {
+        "min": 0,
+        "max": 100,
+        "step": 5
+      },
+      "inflow": {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      "outflow": {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      "inflowAfter": {
+        "min": 0,
+        "max": 20,
+        "step": 1
+      },
+      "policyAt": {
+        "min": 1,
+        "max": 11,
+        "step": 1
+      }
+    },
+    "assumptions": [
+      "A single storage site; stock is measured in tonnes (t) and time in days.",
+      "Inflow changes once at the intervention boundary. Outflow capacity is constant.",
+      "Actual processing is limited by the stock and incoming waste available during each interval; stock cannot be negative.",
+      "No storage limit, degradation, or other outflow is represented. This is an educational model."
+    ],
+    "visualization": {
+      "version": "illustrated-stock-1",
+      "referenceStock": 100
+    }
+  },
+  {
+    "id": "flood",
+    "version": "1.0.2-en",
+    "engine": "single-stock",
+    "title": "Water stored in an urban area",
+    "shortTitle": "Flooding",
+    "theme": "blue",
+    "context": "Runoff enters an urban storage area. After six minutes, runoff decreases while drainage capacity stays the same. How does the volume of stored water change?",
+    "stockLabel": "Stored water",
+    "inflowLabel": "Runoff inflow",
+    "outflowLabel": "Drainage capacity",
+    "stockUnit": "m³",
+    "timeUnit": "min",
+    "flowUnit": "m³/min",
+    "duration": 12,
+    "dt": 1,
+    "defaults": {
+      "initialStock": 200,
+      "inflow": 120,
+      "outflow": 80,
+      "inflowAfter": 90,
+      "policyAt": 6
+    },
+    "bounds": {
+      "initialStock": {
+        "min": 0,
+        "max": 1000,
+        "step": 50
+      },
+      "inflow": {
+        "min": 0,
+        "max": 200,
+        "step": 10
+      },
+      "outflow": {
+        "min": 0,
+        "max": 200,
+        "step": 10
+      },
+      "inflowAfter": {
+        "min": 0,
+        "max": 200,
+        "step": 10
+      },
+      "policyAt": {
+        "min": 1,
+        "max": 11,
+        "step": 1
+      }
+    },
+    "assumptions": [
+      "A single water reservoir; volume is measured in m³ and time in minutes.",
+      "The input is runoff flow, not rainfall intensity. Rainfall is not converted into runoff.",
+      "Actual drainage is limited by the water and incoming runoff available during each interval; stock cannot be negative.",
+      "No topography, infiltration, overflow, storage limit, or prediction of flood depth is represented."
+    ],
+    "visualization": {
+      "version": "illustrated-stock-1",
+      "referenceStock": 1000
+    }
+  }
+]

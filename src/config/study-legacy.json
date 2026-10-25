@@ -1,0 +1,14 @@
+{
+  "id": "stock-flow-transfer",
+  "version": "pilot-draft-4-collection-en",
+  "appVersion": "0.4.3",
+  "title": "A Reusable Web-Based Simulation Platform to Support Transfer of Systems Thinking Across Environmental Contexts",
+  "reflectionMinimumSeconds": 60,
+  "minimumDistinctRuns": 2,
+  "stages": ["pretest", "waste-predict", "waste-experiment", "waste-revise", "flood-predict", "flood-experiment", "flood-revise", "reflection", "posttest", "transfer", "complete"],
+  "conditionLabels": {
+    "guided": "A · Guided comparison",
+    "separate": "B · Separate-case reflection"
+  },
+  "language": "en"
+}
